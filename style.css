@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --header_font: "Bebas Neue", sans-serif;
+    --regtext: "Roboto", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --outline:1px dotted red;
+}
+body{
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    display: flex;
+    flex:1;
+    flex-grow: 5;
+    flex-direction: column;
+    overflow-y: auto;
+    background-image: url("herobg.jpg");
+}
+
+nav{
+    position: sticky;
+    top:0;
+    background: #131313;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: var(--header_font);
+    padding: 1rem;
+    width:100%;
+}
+.navleft,
+.navright{
+    display:flex;
+    justify-content: space-evenly;
+    width: 30vw;
+}
+.logodiv{
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 150%;
+    color: #ffffffc4;
+}
+nav a:hover{
+    color: #fff;
+}
+
+.logo{
+    width: 10rem;
+}
