@@ -9,6 +9,8 @@
     padding: 0;
     box-sizing: border-box;
     --outline:1px dotted red;
+    color: #fff;
+    font-family: var(--regtext);
 }
 body{
     height: 100dvh;
@@ -23,6 +25,7 @@ main{
     flex-direction: column;
     overflow-y: auto;
     background-image: url("herobg.jpg");
+    background-size: cover;
 }
 
 nav{
@@ -49,14 +52,22 @@ nav{
 }
 
 nav a{
+    font-family: var(--header_font);
     text-decoration: none;
     font-size: 150%;
     color: #ffffffc4;
+    transition: 0.25s;
 }
 nav a:hover{
     color: #fff;
 }
 
 .logo{
-    width: 10rem;
+    width: 7.5rem;
+}
+h1{
+    font-family: var(--header_font);
+    font-size: 400%;
+    text-align: center;
+    margin-top: 2rem;
 }
