@@ -9,7 +9,7 @@
     padding: 0;
     box-sizing: border-box;
     --outline:1px dotted red;
-    color: #fff;
+    --color: #ffffff00;
     font-family: var(--regtext);
 }
 body{
@@ -17,6 +17,8 @@ body{
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    background-image: url("herobg.jpg");
+    background-size: cover;
 }
 main{
     display: flex;
@@ -24,26 +26,47 @@ main{
     flex-grow: 5;
     flex-direction: column;
     overflow-y: auto;
-    background-image: url("herobg.jpg");
-    background-size: cover;
-}
 
+
+}
+/*.fiddy{
+    display:block;
+    height: 33.33dvh;
+    width: 100%;
+    background: rgba(255, 255, 255, 0);
+}*/
 nav{
     position: sticky;
-    top:0;
-    background: #131313;
+    top: 0dvh;
+    background: #141414;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     font-family: var(--header_font);
     padding: 1rem;
     width:100%;
+    --transform: translate(0%,-50%);
+    animation: move-top-on-scroll linear forwards;
+    animation-timeline: scroll();        
+    animation-range: 0vh 100dvh;
+}
+
+.logo{
+    height: 50dvh;
+    animation: move-top-on-scroll2 linear forwards;
+    animation-timeline: scroll();        
+    animation-range: 0vh 100dvh;
 }
 .navleft,
 .navright{
+    --padding-left: 0rem;
+    --padding-right: 0rem;
     display:flex;
     justify-content: space-evenly;
     width: 30vw;
+    animation: move-top-on-scroll3 ease-in-out forwards;
+    animation-timeline: scroll();        
+    animation-range: 0vh 100dvh;
 }
 .logodiv{
     display: flex;
@@ -59,15 +82,67 @@ nav a{
     transition: 0.25s;
 }
 nav a:hover{
-    color: #fff;
+    color: #ffffff8e;
+    text-shadow: 0px 0px 3px #545454;
 }
 
-.logo{
-    width: 7.5rem;
-}
+
 h1{
     font-family: var(--header_font);
     font-size: 400%;
     text-align: center;
     margin-top: 2rem;
+}
+.hero{
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    --background-image: url("herobg.jpg");
+    --background-size: cover;
+}
+.story{
+    position: sticky;
+    top:12.5dvh;
+    height:87.5dvh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("5ae7c6c7a02e4057f0be9ea6cca89ea03c0bf269f1ba4ea5650c05a8afe771e9_3.jpg");
+    background-size: cover;
+}
+
+
+
+@keyframes move-top-on-scroll {
+  from {
+    top: 25dvh; 
+    height: 50dvh;
+    background: #14141400;
+  }
+  to {
+    top: 0;
+    height: 12.5dvh;
+    background: #141414;
+  }
+}
+@keyframes move-top-on-scroll2 {
+  from {
+    top: 25dvh; 
+    height: 50dvh;
+  }
+  to {
+    top: 0;
+    height: 12.5dvh;
+  }
+}
+@keyframes move-top-on-scroll3 {
+  from {
+    top: 25dvh; 
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  to {
+    top: 0;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
 }
