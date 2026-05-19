@@ -3,7 +3,7 @@
 :root{
     --header_font: "Bebas Neue", sans-serif;
     --regtext: "Roboto", sans-serif;
-    --text_color: #ffffffc4;
+    --text_color: #dedcdc;
 }
 *{
     margin: 0;
@@ -12,6 +12,7 @@
     --outline:1px dotted red;
     font-family: var(--regtext);
     color: var(--text_color);
+    line-height: 130%;
 }
 main{
     display: flex;
@@ -24,8 +25,10 @@ main{
 section{
     min-height: 200dvh;
     display: flex;
+    flex-direction: column;
     --transform: translate(0%,-50%);
     justify-content: center;
+    align-items: center;
 }
 
 .hero{
@@ -37,11 +40,71 @@ section{
 
 }
 .story{
+    min-height: 300dvh;
+    justify-content: flex-start;
     padding-top: 5rem;
     background: url(storypicture.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+}
+.story h2{
+    margin-bottom: 0.5rem;
+}
+.story h3{
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+.story1 #text{
+    margin-right: 2rem;
+}
+
+.story1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #47474706;
+    backdrop-filter: blur(4px);
+    padding: 2rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    border-radius: 20px;
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.1);
+    border: #434343 solid 3px;
+    margin-bottom: 4rem;
+} 
+.story1 li{
+    margin-left: 2rem;
+}
+.story1 img{
+    border-radius: 20px;
+}
+.story2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #47474706;
+    backdrop-filter: blur(4px);
+    padding: 2rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    border-radius: 20px;
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.1);
+    border: #434343 solid 3px;
+} 
+.story2 li{
+    margin-left: 2rem;
+}
+.story2 img{
+    border-radius: 20px;
+}
+.story2 #text{
+    margin-left: 2rem;
+}
+.characters{
+    background: #f1f;
 }
 nav{
     position: sticky;
@@ -100,6 +163,13 @@ h1{
     font-size: 400%;
     text-align: center;
     margin-top: 2rem;
+}
+
+h2{
+    font-family: var(--header_font);
+}
+h3{
+    font-family: var(--header_font);
 }
 
 
